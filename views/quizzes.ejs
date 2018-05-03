@@ -5,7 +5,8 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <% for (var i in quizzes) { %>
+      <p>Quizzes</p>
+      <% for (var i in quizzes) { %>
       <% var quiz = quizzes[i]; %>
       <p>Pregunta Número <%=(+i)%> : <%= quiz.question %>? ==> <%= quiz.answer%></p>
 <% } %>
