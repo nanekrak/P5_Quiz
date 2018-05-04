@@ -2,7 +2,7 @@
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize("sqlite:quizzes.sqlite", {logging: false});
 
-var quiz=sequelize.define('Quiz', {
+var quiz=sequelize.define('quiz', {
     question: {
         type: Sequelize.STRING,
         unique: {msg: "Ya existe esta pregunta."},
@@ -15,11 +15,11 @@ var quiz=sequelize.define('Quiz', {
 });
 
 sequelize.sync()
-.then(() => sequelize.models.Quiz.count())
+.then(() => sequelize.models.quiz.count())
 .then(count => {
     if (!count) {
 
-        return sequelize.models.Quiz.bulkCreate([
+        return sequelize.models.quiz.bulkCreate([
             { question: "Capital de Italia", answer: "Roma"},
             { question: "Capital de Francia", answer: "París"},
             { question: "Capital de España", answer: "Madrid"},
@@ -31,5 +31,5 @@ sequelize.sync()
     console.log(error);
 });
 
-exports.Quiz=quiz;
+exports.quiz=quiz;
 module.exports = sequelize;

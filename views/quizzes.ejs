@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>quizzes</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-      <p>Quizzes</p>
+    <h1>Quizzes</hq>
       <% for (var i in quizzes) { %>
       <% var quiz = quizzes[i]; %>
       <p>Pregunta Número <%=(+i)%> : <%= quiz.question %>? ==> <%= quiz.answer%></p>
 <% } %>
-  </body>
-</html>

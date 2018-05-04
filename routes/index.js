@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
-const {models}=require("../models");
+const {models}=require("../models/index");
 const Sequelize=require("sequelize");
+//const sequelize =require("../models/index")
 
 var quiz_control= require ('../control/quiz_control');
 
